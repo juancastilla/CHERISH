@@ -11,13 +11,20 @@ from pathlib import Path
 import os
 import platform
 
+if platform.system() == 'Darwin':
+    main_path = Path(".")
+    logo_path = Path(".")
+else:
+    main_path = Path("/app/cherish/dashboard/")
+    logo_path = Path("/app/cherish/dashboard/")
+
 # Say, "the default sans-serif font is COMIC SANS"
 matplotlib.rcParams['font.sans-serif'] = "DIN Alternate"
 # Then, "ALWAYS use sans-serif fonts"
 matplotlib.rcParams['font.family'] = "sans-serif"
 
 def read_markdown_file(markdown_file):
-    return Path(markdown_file).read_text()
+    return Path(str(main_path.joinpath(markdown_file))).read_text()
 
 def load_factors():
     sheet_id = '1MQt451tCvDwlXjZBV0xO8kGUPDFFmGaZTXQYSJhUM4E'
