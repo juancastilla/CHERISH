@@ -6,8 +6,8 @@ if platform.system() == 'Darwin':
     main_path = Path(".")
     logo_path = Path(".")
 else:
-    main_path = Path("CHERISH")
-    logo_path = Path("CHERISH")
+    main_path = Path(".")
+    logo_path = Path(".")
 
 ### APP CONFIGURATION ###
 
