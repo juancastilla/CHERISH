@@ -1,11 +1,15 @@
-from utilities import *   
+from utilities import *
+import os
 
+### CONFIGURATION ###
+
+stdir = os.getcwd()   # App dir
 
 apptitle = 'ITLAs Computational Social Science Model of Child Wellbeing and Social Assistance Pathways (CHERISH)'
 
 st.set_page_config(page_title=apptitle, layout="wide", page_icon=":eyeglasses:")
 
-st.sidebar.image('CHERISH.png')
+st.sidebar.image(os.path.join(os.path.dirname(stdir), 'CHERISH.png'))
 
 st.sidebar.markdown('# ITLAs Computational Social Science Model of Child Wellbeing and Social Assistance Pathways (CHERISH)')
 
@@ -34,5 +38,5 @@ st.sidebar.markdown('#')
 st.sidebar.markdown('#')
 st.sidebar.markdown('#')
 
-    
-st.sidebar.image('collaboration_logos.png')
+st.sidebar.image(os.path.join(os.path.dirname(stdir), 'collaboration_logos.png'))
+
