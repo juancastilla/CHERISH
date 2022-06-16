@@ -1,13 +1,23 @@
 from utilities import *
-import os
 
-### CONFIGURATION ###
+### PATH CONFIGURATION ###
+
+if platform.system() == 'Darwin':
+    main_path = Path(".")
+    logo_path = Path(".")
+else:
+    main_path = Path("CHERISH")
+    logo_path = Path("CHERISH")
+
+### APP CONFIGURATION ###
 
 apptitle = 'ITLAs Computational Social Science Model of Child Wellbeing and Social Assistance Pathways (CHERISH)'
 
 st.set_page_config(page_title=apptitle, layout="wide", page_icon=":eyeglasses:")
 
-st.sidebar.image(os.path.join(os.path.dirname(os.getcwd()), "CHERISH.png"))
+### APP MAIN ###
+
+st.sidebar.image(str(logo_path.joinpath('CHERISH.png')))
 
 st.sidebar.markdown('# ITLAs Computational Social Science Model of Child Wellbeing and Social Assistance Pathways (CHERISH)')
 
@@ -36,5 +46,5 @@ st.sidebar.markdown('#')
 st.sidebar.markdown('#')
 st.sidebar.markdown('#')
 
-st.sidebar.image(os.path.join(os.path.dirname(os.getcwd()), "collaboration_logos.png"))
+st.sidebar.image(str(logo_path.joinpath('collaboration_logos.png')))
 

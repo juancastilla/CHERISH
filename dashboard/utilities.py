@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 from st_aggrid import AgGrid
 from pathlib import Path
+import os
 
 # Say, "the default sans-serif font is COMIC SANS"
 matplotlib.rcParams['font.sans-serif'] = "DIN Alternate"
