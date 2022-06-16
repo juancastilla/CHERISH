@@ -1,0 +1,123 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vis-network@latest/styles/vis-network.css" type="text/css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vis-network@latest/dist/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 1000px;
+            height: 1000px;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+        #config {
+            float: left;
+            width: 400px;
+            height: 600px;
+        }
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<div id = "config"></div>
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"color": "lightblue", "group": 1, "id": 1, "label": "Parent Mental health", "shape": "dot", "size": 15}, {"color": "lightblue", "group": 1, "id": 2, "label": "Parent Separation", "shape": "dot", "size": 15}, {"color": "lightblue", "group": 1, "id": 3, "label": "Parent Unemployment", "shape": "dot", "size": 15}, {"color": "lemonchiffon", "group": 2, "id": 4, "label": "Student counselling", "shape": "dot", "size": 15}, {"color": "lemonchiffon", "group": 2, "id": 5, "label": "Financial counselling", "shape": "dot", "size": 15}, {"color": "lemonchiffon", "group": 2, "id": 6, "label": "Family interventions", "shape": "dot", "size": 15}, {"color": "salmon", "group": 3, "id": 7, "label": "Mental health (own)", "shape": "dot", "size": 15}, {"color": "salmon", "group": 3, "id": 8, "label": "Anxiety", "shape": "dot", "size": 15}, {"color": "salmon", "group": 3, "id": 9, "label": "Loneliness", "shape": "dot", "size": 15}, {"color": "lightgreen", "group": 4, "id": 10, "label": "Disability pension", "shape": "dot", "size": 15}, {"color": "lightgreen", "group": 4, "id": 11, "label": "Housing aid", "shape": "dot", "size": 15}, {"color": "lightgreen", "group": 4, "id": 12, "label": "Rehabilitation allowance", "shape": "dot", "size": 15}, {"color": "orchid", "group": 5, "id": 13, "label": "Long-term social assistance use (2yr+)", "shape": "dot", "size": 40}]);
+        edges = new vis.DataSet([]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": true,
+        "filter": [
+            "physics"
+        ]
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+        // if this network requires displaying the configure window,
+        // put it in its div
+        options.configure["container"] = document.getElementById("config");
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

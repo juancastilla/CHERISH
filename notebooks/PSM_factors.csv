@@ -1,0 +1,14 @@
+node_group,short_name,long_name,node_id,node_importance,Controllability,Strategic_Importance,Uncertainty,Vulnerable_To_Change,Resistant_To_Change,Comments / Justification
+1,PARENTS_1,Parent Mental health,1,5,low,,,,,any additional information about the nature of this factor?
+1,PARENTS_2,Parent Separation,2,4,,high,,,,any additional information about the nature of this factor?
+1,PARENTS_3,Parent Unemployment,3,3,,,,,,any additional information about the nature of this factor?
+2,SERVICES_1,Student counselling,4,5,,,,high,,any additional information about the nature of this factor?
+2,SERVICES_2,Financial counselling,5,4,,,,,,any additional information about the nature of this factor?
+2,SERVICES_3,Family interventions,6,3,,,,,,any additional information about the nature of this factor?
+3,HEALTH_1,Mental health (own),7,5,,,,,high,any additional information about the nature of this factor?
+3,HEALTH_2,Anxiety,8,4,,,high,,,any additional information about the nature of this factor?
+3,HEALTH_3,Loneliness,9,3,medium,,,,,any additional information about the nature of this factor?
+4,BENEFITS_1,Disability pension,10,5,,,,,,any additional information about the nature of this factor?
+4,BENEFITS_2,Housing aid,11,4,,,,,,any additional information about the nature of this factor?
+4,BENEFITS_3,Rehabilitation allowance,12,3,,,,,,any additional information about the nature of this factor?
+5,FOCAL_FACTOR,Long-term social assistance use (2yr+),13,5,,,,,,any additional information about the nature of this factor?

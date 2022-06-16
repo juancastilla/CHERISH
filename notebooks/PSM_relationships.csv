@@ -1,0 +1,38 @@
+From,To,Type,Strength,Controllability,Strategic_Importance,Uncertainty,Vulnerable_To_Change,Resistant_To_Change,Comments / Justification,From_id,To_id
+Parent Mental health,Housing aid,positive,weak,,,,,,any additional information about the nature of the relationship,1,11
+Parent Mental health,Long-term social assistance use (2yr+),positive,weak,,high,,,,,1,13
+Parent Separation,Family interventions,positive,weak,,,,,,,2,6
+Parent Separation,Long-term social assistance use (2yr+),negative,weak,,,,high,,,2,13
+Parent Unemployment,Long-term social assistance use (2yr+),positive,weak,,,,,,,3,13
+Student counselling,Financial counselling,negative,strong,,,,,,,4,5
+Student counselling,Disability pension,negative,weak,,,,,,,4,10
+Student counselling,Housing aid,positive,weak,,,high,,,,4,11
+Student counselling,Long-term social assistance use (2yr+),positive,weak,low,,,,,,4,13
+Financial counselling,Parent Unemployment,positive,weak,,,,,,,5,3
+Financial counselling,Long-term social assistance use (2yr+),negative,weak,,,,,,,5,13
+Family interventions,Parent Separation,positive,medium,,,,,,,6,2
+Family interventions,Financial counselling,negative,weak,,,,,,,6,5
+Family interventions,Anxiety,negative,weak,,,,,,,6,8
+Family interventions,Rehabilitation allowance,positive,weak,,medium,,,high,,6,12
+Family interventions,Long-term social assistance use (2yr+),positive,weak,,,,,,,6,13
+Mental health (own),Parent Separation,positive,weak,,,,,,,7,2
+Mental health (own),Student counselling,negative,medium,,,,,,,7,4
+Mental health (own),Housing aid,positive,strong,,,,,low,,7,11
+Mental health (own),Rehabilitation allowance,positive,weak,medium,,,,,,7,12
+Mental health (own),Long-term social assistance use (2yr+),positive,weak,,,,,,,7,13
+Anxiety,Financial counselling,negative,medium,,,,,,,8,5
+Anxiety,Mental health (own),negative,strong,,,,,,,8,7
+Anxiety,Long-term social assistance use (2yr+),positive,strong,,,,,,,8,13
+Loneliness,Parent Unemployment,positive,strong,,,,,,,9,3
+Loneliness,Financial counselling,negative,weak,,,,,,,9,5
+Loneliness,Anxiety,positive,weak,,,,,,,9,8
+Loneliness,Housing aid,positive,weak,,,high,,medium,,9,11
+Loneliness,Long-term social assistance use (2yr+),positive,weak,high,,,,,,9,13
+Disability pension,Parent Separation,negative,strong,,,,,,,10,2
+Disability pension,Parent Unemployment,positive,weak,,,,,,,10,3
+Disability pension,Financial counselling,negative,weak,,,,,,,10,5
+Disability pension,Mental health (own),positive,weak,,,,,,,10,7
+Disability pension,Anxiety,positive,medium,,,,,,,10,8
+Disability pension,Long-term social assistance use (2yr+),positive,medium,,,,,,,10,13
+Housing aid,Parent Separation,negative,medium,,,,,,,11,2
+Housing aid,Long-term social assistance use (2yr+),negative,medium,,,,high,,,11,13
