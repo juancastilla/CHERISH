@@ -3,4 +3,4 @@ pandas
 pyvis
 networkx
 matplotlib
-st_aggrid
+streamlit-aggrid
