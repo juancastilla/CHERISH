@@ -27,8 +27,8 @@ def read_markdown_file(markdown_file):
     return Path(str(main_path.joinpath(markdown_file))).read_text()
 
 def load_factors():
-    sheet_id = '1MQt451tCvDwlXjZBV0xO8kGUPDFFmGaZTXQYSJhUM4E'
-    sheet_name = 'Factors'
+    sheet_id = '1VN4e83ImxBZPxw8QFNUfKOqDigwdYbsYpgowXWVoJrw'
+    sheet_name = 'B1_Factors'
     url = f'https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}'
     df_factors=pd.read_csv(url)
     df_factors = df_factors.loc[:, ~df_factors.columns.str.contains('^Unnamed')]
@@ -39,8 +39,8 @@ def load_factors():
 def plot_factors():
     G=nx.empty_graph()
     
-    sheet_id = '1MQt451tCvDwlXjZBV0xO8kGUPDFFmGaZTXQYSJhUM4E'
-    sheet_name = 'Factors'
+    sheet_id = '1VN4e83ImxBZPxw8QFNUfKOqDigwdYbsYpgowXWVoJrw'
+    sheet_name = 'B1_Factors'
     url = f'https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}'
     df_factors=pd.read_csv(url)
     df_factors = df_factors.loc[:, ~df_factors.columns.str.contains('^Unnamed')]
@@ -73,8 +73,8 @@ def plot_factors():
         components.html(HtmlFile.read(),height=1000)
         
 def load_relationships():
-    sheet_id = '1MQt451tCvDwlXjZBV0xO8kGUPDFFmGaZTXQYSJhUM4E'
-    sheet_name = 'Relationships'
+    sheet_id = '1VN4e83ImxBZPxw8QFNUfKOqDigwdYbsYpgowXWVoJrw'
+    sheet_name = 'B1_Relationships'
     url = f'https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}'
     df_relationships=pd.read_csv(url)
     df_relationships = df_relationships.loc[:, ~df_relationships.columns.str.contains('^Unnamed')]
@@ -85,14 +85,14 @@ def load_relationships():
 def plot_relationships():
     G=nx.empty_graph(create_using=nx.DiGraph())
 
-    sheet_id = '1MQt451tCvDwlXjZBV0xO8kGUPDFFmGaZTXQYSJhUM4E'
-    sheet_name = 'Factors'
+    sheet_id = '1VN4e83ImxBZPxw8QFNUfKOqDigwdYbsYpgowXWVoJrw'
+    sheet_name = 'B1_Factors'
     url = f'https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}'
     df_factors=pd.read_csv(url)
     df_factors = df_factors.loc[:, ~df_factors.columns.str.contains('^Unnamed')]
     
-    sheet_id = '1MQt451tCvDwlXjZBV0xO8kGUPDFFmGaZTXQYSJhUM4E'
-    sheet_name = 'Relationships'
+    sheet_id = '1VN4e83ImxBZPxw8QFNUfKOqDigwdYbsYpgowXWVoJrw'
+    sheet_name = 'B1_Relationships'
     url = f'https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}'
     df_relationships=pd.read_csv(url)
     df_relationships = df_relationships.loc[:, ~df_relationships.columns.str.contains('^Unnamed')]
@@ -111,6 +111,10 @@ def plot_relationships():
             color = 'lightgreen'
         elif group == '5':
             color = 'orchid'
+        elif group == '6':
+            color = 'darkblue'
+        elif group == '7':
+            color = 'purple'
         else:
             color= ''
         G.add_node(row['node_id'], label=row['long_name'], group=row['node_group'], size=size, color=color)
